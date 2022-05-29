@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Константин Крупский](https://up.htmlacademy.ru/htmlcss/34/user/2086459).
-* Наставник: `Павел Нюкало`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel).
 
 ---
 
