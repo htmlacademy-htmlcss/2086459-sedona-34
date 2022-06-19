@@ -10,7 +10,7 @@
   <header class="page-header">
     <nav class="navigation">
       <a class="navigation-logo" href="#">
-        <img class="page-header-logo" alt="Логотип «Седона»." src="#">
+        <img class="page-header-logo" alt="Логотип «Седона»." src="images/logo.svg" width="139" height="70">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
@@ -44,7 +44,9 @@
   <main class="main-index">
     <section class="welcome">
       <h1 class="visually-hidden">«Седона»</h1>
-      <img class="welcome-image" src="#" alt="Добро пожаловать на сайт «Седона».">
+      <img class="welcome-text" src="images/welcome.png" alt="Добро пожаловать на сайт «Седона»." width="458" height="352">
+      <!--Подглядел это в ретро и дополнил, поставил png, возможно нужно svg, прошу проверить-->
+      <img class="welcome-image" src="images/welcome-image-background.jpg" alt="Красивые горы города Седона" width="1200" height="485">
     </section>
 
     <section class="welcome-subtitle">
@@ -59,7 +61,7 @@
           <h3 class="advantages-title">Настоящий городок</h3>
           <p class="advantages-description">— №1 —</p>
           <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          <img class="advantages-item-photo" alt="Красивая веранда в городе Седона" src="#">
+          <img class="advantages-item-foto" alt="Красивая веранда в городе Седона" src="images/advantages-item-foto-1.jpg" width="800" height="384">
 
           <ul class="advantages-item-black-words">
             <li class="advantages-item-black-words-list">
@@ -75,12 +77,12 @@
             <li class="advantages-item-black-words-list">
               <h3 class="advantages-title">Сувениры</h3>
               <p class="advantages-description">Не только китайского, но и настоящего местного производства!</p>
-              <img class="advantages-item-photo" alt="Узкий опасный мост" src="#">
             </li>
           </ul>
         </li>
 
         <li class="advantages-item-white-words">
+          <img class="advantages-item-foto" alt="Узкий опасный мост" src="images/advantages-item-foto-2.jpg" width="800" height="384">
           <h3 class="advantages-title">Там есть мост дьявола</h3>
           <p class="advantages-description">— №2 —</p>
           <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -121,6 +123,7 @@
         <input class="field" placeholder="Ваш email" type="email" name="newsletter-email" id="newsletter-email"
           required>
         <button class="button newsletter-button" type="submit">Подписаться</button>
+        <!--Здесь будет добавлена фоновая картинка с помощью css-->
       </form>
     </section>
   </main>
@@ -145,7 +148,12 @@
     </ul>
 
     <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <p class="about-text"><a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
+    <p class="about-text">
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+        <img class="htmlacademy-logo" alt="Логотип «HTML Academy»." src="images/htmlacademy-logo.svg" width="114.9" height="32.9">
+      </a>
+    </p>
+    <!--Подглядел это в ретро и поменял-->
 
   </footer>
 
