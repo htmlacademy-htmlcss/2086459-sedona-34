@@ -26,7 +26,7 @@ body {
 /*Ниже сначала стили для кнопок/ссылок*/
 
 .button {
-    font-family: "PT Sans", sans-serif;
+    font-family: inherit;
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
@@ -52,7 +52,7 @@ body {
 }
 
 .footer-button {
-    font-family: "PT Sans", sans-serif;
+    font-family: inherit;
     text-decoration: none;
 }
 
@@ -205,6 +205,7 @@ body {
     background-size: 100% auto;
     background-repeat: no-repeat;
     text-align: center;
+    background-color: rgb(146,172,185);
 }
 
 .footer-phone {
@@ -224,8 +225,7 @@ body {
     background-size: 100% auto;
     background-repeat: no-repeat;
     color: rgb(255,255,255);
-    /*background-color: rgb(0,0,0);*/
-    /*Для проверки просьба активировать это свойство, а то сейчас не видно и я бы хотел его установить, если картинка не загрузится*/
+    background-color: rgb(146,172,185);
 }
 
 .catalog-filter-title {
@@ -252,7 +252,7 @@ body {
 }
 
 .select-control {
-    font-family: "PT Sans", sans-serif;
+    font-family:inherit;
     font-size: 18px;
     line-height: 21px;
 }
