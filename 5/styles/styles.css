@@ -1,0 +1,500 @@
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+/*Прописал тут для удобства и скорости проверки, если нужно перенесу*/
+/*Сначала всё что касается главной страницы*/
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    color: rgb(0,0,0);
+    background-color: rgb(255,255,255);
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main-container {
+    flex-grow: 1;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.page-header {
+    height: 65px;
+}
+
+.navigation {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
+    width: 500px; /*Сделано с запасом для еще одного элемента, как в скринкасте*/
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navigation-user {
+    width: 290px; /*Сделано с запасом для еще одного элемента, как в скринкасте*/
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome-text {
+    display: block;
+    margin: 0 auto;
+}
+
+.welcome {
+    height: 485px;
+}
+
+.welcome-subtitle {
+    align-items: center;
+    width: 1200px;
+    height: 282px;
+}
+
+.welcome-subtitle-title {
+    width: 620px;
+    height: 72px;
+    margin: 63px 290px 31px 290px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    width: 1200px;
+}
+
+.advantages-item-white-words {
+    width: 1200px;
+    height: 384px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none
+}
+
+.advantages-item-black-words {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 1200px;
+    height: 384px;
+}
+
+.advantages-item-black-words-list {
+    width: 400px;
+    list-style-type: none;
+    height: 384px;
+}
+
+.city-advantage-container {
+    width: 400px;
+    height: 384px;
+}
+
+.search {
+    height: 417px;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.search-button {
+    width: 574px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.subscribe {
+    height: 411px;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.page-footer {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.visually-hidden {
+    visibility: hidden;
+}
+
+/*Далее дополнение для каталога*/
+
+.catalog-filter {
+    width: 1200px;
+    height: 403px;
+}
+
+.breadcrumbs {
+    display: flex;
+    list-style-type: none;
+}
+
+.options-catalog-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.catalog-filter-group {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.catalog-filter-group-items {
+    width: 150px;
+    height: 150px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.service-card {
+    width: 340px;
+    height: 438px;
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 1200px;
+
+}
+
+.pagination-item {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.in-catalog {
+    width: 1200px;
+    height: 411px;
+}
+
+.catalog-in-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1056px;
+    height: 60px;
+}
+
+.amount-hotels {
+    width: 386px;
+    height: 49px;
+}
+
+/*Ниже сначала стили для кнопок/ссылок*/
+
+.button {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    color: rgb(255,255,255);
+    background-color: rgb(117,97,87);
+    text-decoration: none;
+    text-transform: uppercase;
+    align-items: center;
+    cursor: pointer;
+}
+
+.newsletter-button {
+    background-color: rgb(130,179,211);
+}
+
+.navigation-link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-button {
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.field {
+    font-family: inherit;
+}
+
+.breadcrumbs-link {
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-apply {
+    font-size: 16px;
+    line-height: 20px;
+    background: rgb(130,179,211);
+}
+
+.button-reset {
+    font-size: 16px;
+    line-height: 20px;
+    background-color: unset;
+    text-transform: capitalize;
+}
+
+.button-rank {
+    background-color: unset;
+}
+
+.service-card-button-information {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.service-card-link {
+    color: rgb(0,0,0);
+    text-decoration: none;
+}
+
+.service-card-button-favorites {
+    font-size: 16px;
+    line-height: 20px;
+    background: rgb(130,179,211);
+}
+
+.button-choice {
+    background: rgb(125,181,79);
+}
+
+.pagination-link {
+    background: rgb(130,179,211);
+}
+
+.pagination-current {
+    background: rgb(242,242,242);
+}
+
+/*Теперь стили для index (главной)*/
+
+.welcome {
+    background-image: url("../images/welcome-image-background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.welcome-subtitle {
+    text-align: center;
+}
+
+.welcome-subtitle-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.welcome-subtitle-description {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.advantages-list {
+    text-align: center;
+}
+
+.advantages-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.advantages-item-white-words {
+
+    color: rgb(255,255,255);
+    background-color: rgb(130,179,211);
+}
+
+.advantages-description {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.advantages-item-black-words {
+    color: rgb(0,0,0);
+    background-color: rgb(255,255,255);
+}
+
+.advantages-background-light-blue {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-background-dark-blue {
+    background-color: rgba(131, 179, 211, 0.2);
+}
+
+.search-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.search-description {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.subscribe-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+}
+
+.subscribe-description {
+    font-size: 22px;
+    line-height: 26px;
+    color: rgb(255,255,255);
+}
+
+.subscribe {
+    background-image: url("../images/subscribe-background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: rgb(146,172,185);
+}
+
+.footer-phone {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Теперь дополнение в стили catalog*/
+
+.catalog-filter {
+    background-image: url("../images/subscribe-background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    color: rgb(255,255,255);
+    background-color: rgb(146,172,185);
+}
+
+.catalog-filter-title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+}
+
+.catalog-filter-group-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.control {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.options-housing-amount {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.select-control {
+    font-family:inherit;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.options-hotels {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.service-card-rating {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.amount-hotels {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.in-catalog {
+    color: rgb(0,0,0);
+    background: none;
+}
