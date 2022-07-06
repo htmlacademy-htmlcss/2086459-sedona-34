@@ -59,87 +59,97 @@
 
           <div class="options-catalog-container">
             <form class="catalog-filter-group">
-              <fieldset class="catalog-filter-group-items">
-                <legend class="catalog-filter-group-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="option-pool" checked>
-                      Бассейн
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="option-parking" checked>
-                      Парковка
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="option-internet">
-                      Wi-Fi
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+              <div class="catalog-filter-criteria">
+                <fieldset class="catalog-filter-group-items">
+                  <legend class="catalog-filter-group-title">Инфраструктура:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="option-pool" checked>
+                        Бассейн
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="option-parking" checked>
+                        Парковка
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="option-internet">
+                        Wi-Fi
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
 
-              <fieldset class="catalog-filter-group-items">
-                <legend class="catalog-filter-group-title">Тип Жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="service-group" value="hotel" checked>
-                      Гостиница
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="service-group" value="motel">
-                      Мотель
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="service-group" value="apartments">
-                      Апартаменты
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+                <fieldset class="catalog-filter-group-items">
+                  <legend class="catalog-filter-group-title">Тип Жилья:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="service-group" value="hotel" checked>
+                        Гостиница
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="service-group" value="motel">
+                        Мотель
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="service-group" value="apartments">
+                        Апартаменты
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
 
+              <div class="catalog-filter-cost">
+                <span class="catalog-filter-group-title-cost">Стоимость, ₽:</span>
+                <!--Я так понял, этот блок мы не размечаем, он будет размечен в будущем, пока оставил место для него условно-->
 
-              <span class="catalog-filter-group-title">Стоимость, ₽:</span>
-              <!--Я так понял, этот блок мы не размечаем, он будет размечен в будущем, пока оставил место для него условно-->
-
-              <div class="buttons-in-options">
-                <button class="button button-apply" type="submit">Применить</button>
-                <button class="button-reset button" type="reset">Сбросить</button>
+                <div class="buttons-in-options">
+                  <button class="button button-apply" type="submit">Применить</button>
+                  <button class="button-reset button" type="reset">Сбросить</button>
+                </div>
               </div>
             </form>
+
           </div>
         </section>
 
         <section class="options-housing">
           <h2 class="visually-hidden">Результаты поиска</h2>
-          <p class="options-housing-amount">Найдено гостиниц: 38</p>
+          <div class="options-housing-wrapper">
+            <p class="options-housing-amount">Найдено гостиниц: 38</p>
 
-          <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Сначала популярное</option>
-            <option value="cheap">Сначала дешёвое</option>
-            <option value="expensive">Сначала дорогое</option>
-          </select>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="popular">Сначала популярное</option>
+              <option value="cheap">Сначала дешёвое</option>
+              <option value="expensive">Сначала дорогое</option>
+            </select>
 
-          <a href="#" class="button button-rank">
-            <span class="visually-hidden">Показать таблицу</span>
-          </a>
-          <a class="button button-rank" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-
-          <a class="button button-rank" href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
-
+            <div class="button-rank-wrapper">
+              <a href="#" class="button button-rank button-view-tables">
+                <span class="visually-hidden">Показать таблицу</span>
+              </a>
+            </div>
+            <div class="button-rank-wrapper">
+              <a class="button button-rank button-view-cards" href="#">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+            </div>
+            <div class="button-rank-wrapper">
+              <a class="button button-rank button-view-list" href="#">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </div>
+          </div>
           <ul class="service-list">
             <li class="service-card">
               <a class="service-card-link" href="#">
@@ -147,6 +157,7 @@
                   alt="Звездное небо через скалу">
                 <p class="service-card-title">Amara Resort & Spa</p>
               </a>
+
               <p class="service-card-format options-hotels">Гостиницы</p>
               <p class="service-card-price options-hotels">От 4000 ₽</p>
               <a class="service-card-button-information button" href="#">Подробнее</a>
@@ -234,7 +245,8 @@
         </section>
         <section class="subscribe in-catalog">
           <h2 class="subscribe-title subscribe-title-in-catalog">Подпишитесь на рассылку</h2>
-          <p class="subscribe-description subscribe-description-in-catalog">Только полезная информация и никакого спама, честное бойскаутское!
+          <p class="subscribe-description subscribe-description-in-catalog">Только полезная информация и никакого спама,
+            честное бойскаутское!
           </p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="newsletter-email">Ваш email</label>
