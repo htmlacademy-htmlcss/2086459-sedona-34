@@ -1224,7 +1224,7 @@ img {
     margin-top: 24px;
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-favorite {
     background-image: url("../images/favorite.svg");
     background-size: 18px;
     background-repeat: no-repeat;
@@ -1236,7 +1236,7 @@ img {
     margin-top: 24px;
 }
 
-.navigation-user .navigation-item:nth-child(3) .navigation-link {
+.navigation-item-button {
     min-height: 20px;
     width: 130px;
     color: rgb(255, 255, 255);
