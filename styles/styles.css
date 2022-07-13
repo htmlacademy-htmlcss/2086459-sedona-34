@@ -37,12 +37,12 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    background-size: cover;
 }
 
 .wrapper {
     margin: 0 auto;
     width: 1200px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -84,6 +84,7 @@ img {
     margin: 0;
     padding: 0;
     margin-left: 70px;
+    margin-bottom: -10px;
 }
 
 .welcome-text {
@@ -394,10 +395,10 @@ img {
 .navigation-link-current::after {
     display: block;
     height: 2px;
-    background-color: #756257;
+    background-color: rgb(117, 98, 87);
     content: "";
     min-width: 60px;
-    top: 50px;
+    top: 44px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -418,7 +419,7 @@ img {
 }
 
 .footer-button-image:hover {
-    fill: #68A2CA;
+    fill: rgb(104, 162, 202);
 }
 
 .footer-button-image:focus {
@@ -516,7 +517,7 @@ img {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: #ffffff;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -530,7 +531,8 @@ img {
 
 .range-toggle:active,
 .range-toggle:focus {
-    outline: 3px solid #dbb590;
+    outline: 3px solid;
+    outline-color: rgb(0, 0, 0);
 }
 
 .toggle-min {
@@ -550,7 +552,8 @@ img {
 
 .catalog-filter-label {
     display: flex;
-    border: 2px solid #ffff;
+    border: 2px solid;
+    border-color: rgb(255, 255, 255);
     width: 144px;
     min-height: 48px;
     align-items: center;
@@ -578,7 +581,7 @@ img {
     padding-left: 20px;
     padding-top: 14px;
     padding-bottom: 14px;
-    color: #ffff;
+    color: rgb(255, 255, 255);
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -612,20 +615,20 @@ img {
 }
 
 .button-apply:hover {
-    background: #68A2CA;
+    background: rgb(104, 162, 202);
 }
 
 .button-apply:focus {
-    background: #68A2CA;
+    background: rgb(104, 162, 202);
 }
 
 .button-apply:active {
-    background: #82B3D3;
+    background: rgb(130, 179, 211);
     color: rgba(255, 255, 255, 0.3);
 }
 
 .button-apply:disabled {
-    background: #E5E5E5;
+    background: rgb(229, 229, 229);
 }
 
 .button-reset {
@@ -721,20 +724,20 @@ img {
 }
 
 .service-card-button-favorites:hover {
-    background: #68A2CA;
+    background: rgb(104, 162, 202);
 }
 
 .service-card-button-favorites:focus {
-    background: #68A2CA;
+    background: rgb(104, 162, 202);
 }
 
 .service-card-button-favorites:active {
-    background: #82B3D3;
+    background: rgb(130, 179, 211);
     color: rgba(255, 255, 255, 0.3);
 }
 
 .service-card-button-favorites:disabled {
-    background: #E5E5E5;
+    background: rgb(229, 229, 229);
 }
 
 .button-choice {
@@ -742,20 +745,20 @@ img {
 }
 
 .button-choice:hover {
-    background: #6C9E42;
+    background: rgb(108, 158, 66);
 }
 
 .button-choice:focus {
-    background: #6C9E42;
+    background: rgb(108, 158, 66);
 }
 
 .button-choice:active {
-    background: #7DB54F;
+    background: rgb(125, 181, 79);
     color: rgba(255, 255, 255, 0.3);
 }
 
 .button-choice:disabled {
-    background: #E5E5E5;
+    background: rgb(229, 229, 229);
 }
 
 .pagination-link {
@@ -805,11 +808,11 @@ img {
 
 .welcome {
     background-image: url("../images/welcome-image-background.jpg");
-    background-size: 100% auto;
     background-repeat: no-repeat;
     text-align: center;
     min-height: 485px;
     background-color: rgb(146, 172, 185);
+    background-size: cover;
 }
 
 .welcome-subtitle {
@@ -985,7 +988,7 @@ img {
 
 .subscribe {
     background-image: url("../images/subscribe-background.jpg");
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     background-color: rgb(146, 172, 185);
@@ -1029,11 +1032,11 @@ img {
 }
 
 .footer-phone:hover {
-    color: #756157;
+    color: rgb(117, 97, 87);
 }
 
 .footer-phone:focus {
-    color: #756157;
+    color: rgb(117, 97, 87);
 }
 
 .footer-phone:active {
@@ -1041,15 +1044,15 @@ img {
 }
 
 .htmlacademy-logo {
-    fill: #000;
+    fill: rgb(0, 0, 0);
 }
 
 .htmlacademy-logo:hover {
-    fill: #756157;
+    fill: rgb(117, 97, 87);
 }
 
 .htmlacademy-logo:focus {
-    fill: #756157;
+    fill: rgb(117, 97, 87);
 }
 
 .htmlacademy-logo:active {
@@ -1060,7 +1063,7 @@ img {
 
 .catalog-filter {
     background-image: url("../images/subscribe-background.jpg");
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     color: rgb(255, 255, 255);
     background-color: rgb(146, 172, 185);
@@ -1096,7 +1099,7 @@ img {
     left: 0;
     width: 20px;
     height: 20px;
-    background: #FFFFFF;
+    background: rgb(255, 255, 255);
     border-radius: 4px;
 }
 
@@ -1105,7 +1108,7 @@ img {
 }
 
 .control:hover .control-mark {
-    background-color: #9a9a9a;
+    background-color: rgb(154, 154, 154);
     cursor: pointer;
 }
 
@@ -1212,7 +1215,7 @@ img {
     position: relative;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.navigation-search {
     background-image: url("../images/search.svg");
     background-size: 18px;
     background-repeat: no-repeat;
