@@ -253,7 +253,7 @@ img {
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-top: 61px;
+    margin-top: 59px;
     margin-left: -2px;
 }
 
@@ -401,7 +401,7 @@ img {
     background-color: rgb(117, 98, 87);
     content: "";
     min-width: 60px;
-    top: 44px;
+    top: 43px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -436,37 +436,36 @@ img {
 
 .field {
     font-family: inherit;
-    min-width: 578px;
-    min-height: 60px;
-    border: none;
+    min-width: 554px;
+    min-height: 52px;
     border-radius: 10px 0px 0px 10px;
     margin: 0;
-    padding: 0;
     position: relative;
-    padding-left: 22px;
+    padding: 0 22px;
+    padding-left: 18px;
+    padding-top: 2px;
+    outline: none;
+    border: 3px solid rgb(255, 255, 255);
 }
 
 .field-catalog {
     background: rgb(242, 242, 242);
-    padding-left: 22px;
+    border: 3px solid rgb(242, 242, 242);
 }
 
 .field:hover {
     background: rgb(230, 230, 230);
+    border: 3px solid rgb(230, 230, 230);
 }
 
 .field:focus {
     background: rgb(230, 230, 230);
     border: 3px solid rgb(131, 179, 211);
-    min-width: 572px;
-    min-height: 54px;
 }
 
 .field:active {
     background: rgb(255, 255, 255);
-    border: 2px solid rgb(0, 0, 0);
-    min-width: 574px;
-    min-height: 56px;
+    border: 3px solid rgb(0, 0, 0);
 }
 
 .footer-social-item:nth-child(3) {
@@ -526,7 +525,7 @@ img {
 .catalog-filter-list {
     padding: 0;
     margin: 0;
-    margin-top: 25px;
+    margin-top: 24px;
 }
 
 .range-scale {
@@ -552,8 +551,9 @@ img {
     background: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
-    border: none;
+    border: 3px solid rgb(255, 255, 255);
     top: -8px;
+    outline: none;
 }
 
 .range-toggle:hover {
@@ -566,7 +566,7 @@ img {
 }
 
 .range-toggle:active {
-    border: 2px solid #83B3D3;
+    border: 3px solid rgb(131, 179, 211);
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -609,7 +609,7 @@ img {
 }
 
 .catalog-filter-label:focus {
-    box-shadow: 0px 0px 0px 3px rgba(129, 179, 210, 1);
+    box-shadow: 0 0 0 3px rgba(129, 179, 210, 1), inset 0 0 0 3px rgba(129, 179, 210, 1);
 }
 
 .catalog-filter-label:active {
@@ -665,6 +665,7 @@ img {
     min-height: 20px;
     padding: 14px 15px;
     border-radius: 4px;
+    outline: none;
 }
 
 .button-apply:hover {
@@ -685,18 +686,20 @@ img {
 }
 
 .button-reset {
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 16px;
+    line-height: 20px;
     background-color: unset;
     text-transform: capitalize;
     font-weight: 400;
     margin-top: 6px;
     min-width: 159px;
     min-height: 20px;
-    padding: 14px 15px;
+    padding: 11px 18px;
     border-radius: 4px;
-    padding-left: 19px;
+    padding-left: 21px;
     background: none;
+    border: 3px solid transparent;
+    outline: none;
 }
 
 .button-reset:hover {
@@ -705,7 +708,7 @@ img {
 }
 
 .button-reset:focus {
-    border: 3px solid rgb(131, 179, 211);
+    border-color: rgb(131, 179, 211);
     border-radius: 4px;
     color: rgb(255, 255, 255);
     background: none;
@@ -714,7 +717,6 @@ img {
 .button-reset:active {
     opacity: 0.3;
     background: none;
-    border: none;
 }
 
 .button-rank {
@@ -857,6 +859,7 @@ img {
 
 .pagination-current {
     background: rgb(242, 242, 242);
+    color: rgb(0, 0, 0);
 }
 
 .pagination-current:hover {
@@ -878,10 +881,6 @@ img {
     margin-right: 50px;
 }
 
-
-
-/*Теперь стили для index (главной)*/
-
 .welcome {
     background-image: url("../images/welcome-image-background.jpg");
     background-repeat: no-repeat;
@@ -889,6 +888,13 @@ img {
     min-height: 485px;
     background-color: rgb(146, 172, 185);
     background-size: cover;
+    position: relative;
+}
+
+.welcome-graphic-element {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .welcome-subtitle {
@@ -1102,8 +1108,8 @@ img {
 
 .field::placeholder {
     font-family: inherit;
-    line-height: 21px;
     font-size: 18px;
+    line-height: 21px;
 
 }
 
@@ -1154,7 +1160,7 @@ img {
 /*Теперь дополнение в стили catalog*/
 
 .catalog-filter {
-    background-image: url("../images/subscribe-background.jpg");
+    background-image: url("../images/catalog-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(255, 255, 255);
@@ -1191,11 +1197,13 @@ img {
     position: absolute;
     top: 2px;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     background: rgb(255, 255, 255);
     border-radius: 4px;
     cursor: pointer;
+    border: 3px solid rgb(255, 255, 255);
+    outline: none;
 }
 
 .control-mark-circle {
@@ -1204,6 +1212,7 @@ img {
 
 .control:hover .control-mark {
     background: rgba(255, 255, 255, 0.6);
+    border: 3px solid rgba(255, 255, 255, 0.6);
 }
 
 .control:focus .control-mark {
@@ -1213,6 +1222,7 @@ img {
 
 .control:active .control-mark {
     background: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .control:hover .control-mark-circle {
@@ -1283,6 +1293,7 @@ img {
     border-radius: 4px;
     padding: 0 81px 0 18px;
     appearance: none;
+    background-color: rgb(255, 255, 255);
 }
 
 .select-control:hover {
@@ -1389,7 +1400,7 @@ img {
     margin: 0;
     margin-right: 34px;
     position: relative;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 .navigation-search {
@@ -1405,7 +1416,7 @@ img {
 }
 
 .navigation-item-search {
-    margin-right: 14px;
+    margin-right: 24px;
 }
 
 .navigation-favorite {
@@ -1414,14 +1425,29 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 35px;
-    width: 42px;
+    width: 18px;
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin-top: 15px;
 }
 
+.navigation-favorite-circle {
+    background: rgb(125, 181, 79);
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    color: rgb(255, 254, 254);
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    /* padding: 2px; */
+    position: absolute;
+    left: 12px;
+    bottom: 16px;
+}
+
 .navigation-item-favorite {
-    margin-right: 19px;
+    margin-right: 32px;
 }
 
 .navigation-item-button {
@@ -1443,4 +1469,321 @@ img {
 
 .advantages-title-last-group {
     margin-top: 102px;
+}
+
+.modal-container {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+    position: relative;
+    margin: auto;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    min-height: 480px;
+}
+
+.modal-popup {
+    width: 638px;
+    position: relative;
+}
+
+.modal-title {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    margin-top: 23px;
+    margin-bottom: 62px;
+    margin-left: 29px;
+}
+
+.modal-close-button {
+    position: absolute;
+    padding: 0;
+    top: 52px;
+    right: 70px;
+    width: 56px;
+    height: 56px;
+    background-color: rgb(242, 242, 242);
+    border: 3px solid rgb(242, 242, 242);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal-close-button-item {
+    fill: rgb(0, 0, 0);
+}
+
+.modal-close-button:hover {
+    background-color: rgb(230, 230, 230);
+    border: 3px solid rgb(230, 230, 230);
+}
+
+.modal-close-button:focus {
+    border: 3px solid rgb(131, 179, 211);
+}
+
+.modal-close-button:active {
+    background-color: rgb(230, 230, 230);
+    border: 3px solid rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+}
+
+.modal-close-button:active .modal-close-button-item {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-form {
+    display: none;
+    /* display: grid; */
+    grid-template-columns: 155px 420px;
+    grid-template-rows: repeat(3, 50px) 60px;
+    grid-column-gap: 1px;
+    grid-row-gap: 40px;
+    margin-left: 31px;
+}
+
+.field-group {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.field-text {
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    min-width: 56px;
+    padding-top: 12px;
+}
+
+.date-form-field {
+    min-width: 354px;
+    min-height: 39px;
+    background: rgb(242, 242, 242);
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 2px;
+    border: 3px solid transparent;
+    outline: none;
+}
+
+.date-form-field::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.date-form-field:hover {
+    background: rgb(230, 230, 230);
+}
+
+.date-form-field:focus {
+    background: rgb(230, 230, 230);
+    border: 3px solid rgb(131, 179, 211);
+}
+
+.date-form-field:active {
+    background: rgb(230, 230, 230);
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.date-form-error {
+    color: rgb(255, 87, 87);
+    font-size: 16px;
+    line-height: 40px;
+    min-height: 29px;
+}
+
+.date-form-approve {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 40px;
+    min-height: 29px;
+}
+
+.date-form-calendar {
+    position: absolute;
+    right: 19px;
+    top: 17px;
+    opacity: 0.3;
+}
+
+.field-command-wrapper {
+    display: flex;
+    width: 420px;
+    position: relative;
+}
+
+.modal-button {
+    background: rgb(131, 179, 211);
+    width: 568px;
+    min-height: 46px;
+    padding-top: 7px;
+    border: 3px solid rgb(131, 179, 211);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    margin-left: 1px;
+    margin-top: -1px;
+    border-color: rgb(131, 179, 211);
+    border-radius: 10px;
+}
+
+.modal-button:hover {
+    background: rgb(104, 162, 202);
+    border: 3px solid rgb(104, 162, 202);
+}
+
+.modal-button:focus {
+    border: 3px solid rgb(117, 98, 87);
+    background: rgb(104, 162, 202);
+}
+
+.modal-button:active {
+    background: rgb(104, 162, 202);
+    color: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgb(104, 162, 202);
+}
+
+.field-command-item {
+    background: rgb(242, 242, 242);
+    min-width: 130px;
+    min-height: 37px;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 4px;
+    padding-left: 3px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.field-command-decrease {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.field-command-increase {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.field-command-children {
+    display: flex;
+    margin-left: 55px;
+}
+
+.quantity {
+    margin: 0 19px;
+    padding: 0;
+    padding-right: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.field-mark {
+    width: 13px;
+    height: 13px;
+    font-size: 30px;
+    fill: rgba(0, 0, 0, 0.3);
+    border: 3px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.field-command-button:hover .field-mark {
+    fill: rgba(0, 0, 0);
+}
+
+.field-command-button:focus .field-mark {
+    border: 3px solid rgb(131, 179, 211);
+}
+
+.field-command-button:active .field-mark {
+    fill: rgba(0, 0, 0, 0.2);
+}
+
+.field-command-prompt {
+    background-color: rgb(131, 179, 211);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    transform: rotate(180deg);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    margin-right: 19px;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 21px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.field-command-prompt:hover {
+    background-color: rgb(104, 162, 202);
+}
+
+.field-command-prompt:hover + .field-prompt-information {
+    display: block;
+}
+
+.field-command-prompt:hover + .field-prompt-information + .field-prompt-triangle {
+    display: block;
+}
+
+.field-prompt-information {
+    display: none;
+    position: absolute;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 21px;
+    top: 54px;
+    right: 36px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 51, 51);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 235px;
+    height: 112px;
+    padding: 16px 21px;
+    padding-right: 0;
+}
+
+.field-prompt-triangle {
+    display: none;
+    position: absolute;
+    top: 34px;
+    right: 155px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid rgb(51, 51, 51);
 }
