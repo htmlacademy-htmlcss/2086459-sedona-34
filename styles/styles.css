@@ -193,8 +193,6 @@ img {
     overflow: hidden;
 }
 
-/*Далее дополнение для каталога*/
-
 .breadcrumbs {
     display: flex;
     list-style-type: none;
@@ -545,7 +543,7 @@ img {
     background: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid transparent;
     top: -8px;
     outline: none;
 }
@@ -555,12 +553,12 @@ img {
 }
 
 .range-toggle:focus {
-    border: 3px solid rgb(131, 179, 211);
+    border-color: rgb(131, 179, 211);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:active {
-    border: 3px solid rgb(131, 179, 211);
+    border: 2px solid rgb(131, 179, 211);
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -611,12 +609,14 @@ img {
     padding-bottom: 11px;
     color: rgb(255, 255, 255);
     outline: none;
+    -webkit-appearance: textfield;
     appearance: textfield;
     -moz-appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
     margin: 0;
 }
@@ -1170,8 +1170,6 @@ img {
     fill: rgba(117, 97, 87, 0.3);
 }
 
-/*Теперь дополнение в стили catalog*/
-
 .catalog-filter {
     background-image: url("../images/catalog-background.jpg");
     background-size: cover;
@@ -1232,45 +1230,49 @@ img {
     outline: none;
 }
 
-.control-input:focus + .control-mark {
+.control-input:focus+.control-mark {
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 0 3px rgb(131, 179, 211);
 }
 
-.control-input:hover + .control-mark {
+.control-input:hover+.control-mark {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:active + .control-mark {
+.control-input:active+.control-mark {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:disabled + .control-mark {
+.control-input:disabled+.control-mark {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:focus-visible + .control-mark-circle {
+.control-input:focus-visible+.control-mark-circle {
     background-color: rgba(255, 255, 255);
     box-shadow: 0 0 0 3px rgb(131, 179, 211);
 }
 
-.control-input:focus + .control-mark-circle {
+.control-input:focus+.control-mark-circle {
     background-color: rgba(255, 255, 255);
     box-shadow: 0 0 0 3px rgb(131, 179, 211);
 }
 
-.control-input:checked + .control-mark {
+.control-input:disabled+.control-mark-circle {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:checked+.control-mark {
     background-image: url("../images/mark.svg");
     background-size: 12px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.control-input:checked:disabled + .control-mark {
+.control-input:checked:disabled+.control-mark {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:checked + .control-mark-circle {
+.control-input:checked+.control-mark-circle {
     background-image: url("../images/mark-circle.svg");
     background-size: 10px;
     background-repeat: no-repeat;
@@ -1317,6 +1319,7 @@ img {
     border: 2px solid rgb(229, 229, 229, 1);
     border-radius: 4px;
     padding: 0 81px 0 18px;
+    -webkit-appearance: none;
     appearance: none;
     background-color: rgb(255, 255, 255);
     outline: none;
@@ -1367,6 +1370,7 @@ img {
     min-height: 50px;
     margin-top: 5px;
     padding-left: 18px;
+    -webkit-appearance: none;
     appearance: none;
     outline: none;
 }
@@ -1470,7 +1474,6 @@ img {
     font-size: 10px;
     line-height: 17px;
     text-align: center;
-    /* padding: 2px; */
     position: absolute;
     left: 12px;
     top: 16px;
@@ -1506,6 +1509,7 @@ img {
 .modal-container {
     display: none;
     /*display: flex;*/
+    /*Применяемое свойство вместо display: none;*/
     position: fixed;
     left: 0;
     top: 0;
@@ -1808,11 +1812,11 @@ img {
     background-color: rgb(104, 162, 202);
 }
 
-.field-command-prompt:hover + .field-prompt-information {
+.field-command-prompt:hover+.field-prompt-information {
     display: block;
 }
 
-.field-command-prompt:hover + .field-prompt-information + .field-prompt-triangle {
+.field-command-prompt:hover+.field-prompt-information+.field-prompt-triangle {
     display: block;
 }
 
