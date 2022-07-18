@@ -14,9 +14,6 @@
     font-display: swap;
 }
 
-/*Прописал тут для удобства и скорости проверки, если нужно перенесу*/
-/*Сначала всё что касается главной страницы*/
-
 html {
     height: 100%;
 }
@@ -27,11 +24,11 @@ body {
     line-height: 28px;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    min-width: 1200px;
 }
 
 .wrapper {
@@ -54,6 +51,11 @@ body {
     flex-wrap: wrap;
 }
 
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
 .navigation-list {
     margin: 0;
     padding: 0;
@@ -62,7 +64,6 @@ body {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
     margin-left: 46px;
 }
 
@@ -72,7 +73,7 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 120px;
+    margin-left: 122px;
 }
 
 .navigation-logo {
@@ -85,7 +86,7 @@ body {
 .welcome-text {
     display: block;
     margin: 0 auto;
-    padding-top: 52px;
+    padding-top: 50px;
 }
 
 .advantages-icons {
@@ -176,6 +177,11 @@ body {
     margin-right: 26px;
 }
 
+.about-text {
+    margin: 0;
+    margin-top: 12px;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -187,15 +193,13 @@ body {
     overflow: hidden;
 }
 
-/*Далее дополнение для каталога*/
-
 .breadcrumbs {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     align-items: center;
 }
 
@@ -216,7 +220,7 @@ body {
     width: 150px;
     min-height: 150px;
     margin: 0;
-    margin-right: 70px;
+    margin-right: 71px;
     padding: 0;
     border: none;
 }
@@ -226,8 +230,8 @@ body {
     min-width: 366px;
     min-height: 150px;
     margin: 0;
-    margin-right: 106px;
-    margin-bottom: 60px;
+    margin-right: 98px;
+    margin-bottom: 48px;
 }
 
 .catalog-filter-group-title-cost {
@@ -243,13 +247,14 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 59px;
+    margin-left: -2px;
 }
 
 .service-list {
     display: grid;
     grid-template-columns: repeat(3, 340px);
-    column-gap: 18px;
+    column-gap: 19px;
     margin: 0;
     margin-bottom: 66px;
     padding: 0;
@@ -262,16 +267,13 @@ body {
     width: 340px;
     min-height: 400px;
     padding: 20px;
+    padding-bottom: 10px;
 }
 
 .service-card-title {
     margin: 0;
-    margin-top: 16px;
+    margin-top: 11px;
     font-weight: 700;
-}
-
-.service-card-image {
-    object-fit: fill;
 }
 
 .service-card-wrapper {
@@ -295,7 +297,7 @@ body {
     list-style-type: none;
     margin: 0;
     flex-wrap: wrap;
-    margin-left: 72px;
+    margin-left: 74px;
     padding: 0;
     margin-right: 270px;
 }
@@ -317,8 +319,6 @@ body {
     min-height: 60px;
     flex-wrap: wrap;
 }
-
-/*Ниже сначала стили для кнопок/ссылок*/
 
 .button {
     display: inline-block;
@@ -356,7 +356,7 @@ body {
 .newsletter-button {
     background: rgb(130, 179, 211);
     border-radius: 0px 10px 10px 0px;
-    width: 170px;
+    width: 200px;
     min-height: 36px;
     padding: 12px 15px;
 }
@@ -393,7 +393,7 @@ body {
     background-color: rgb(117, 98, 87);
     content: "";
     min-width: 60px;
-    top: 44px;
+    top: 43px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -428,16 +428,41 @@ body {
 
 .field {
     font-family: inherit;
-    min-width: 600px;
-    min-height: 60px;
-    border: none;
+    min-width: 554px;
+    min-height: 52px;
     border-radius: 10px 0px 0px 10px;
     margin: 0;
-    padding: 0;
+    position: relative;
+    padding: 0 22px;
+    padding-left: 18px;
+    padding-top: 2px;
+    outline: none;
+    border: 3px solid rgb(255, 255, 255);
 }
 
 .field-catalog {
     background: rgb(242, 242, 242);
+    border: 3px solid rgb(242, 242, 242);
+}
+
+.field:hover {
+    background: rgb(230, 230, 230);
+    border: 3px solid rgb(230, 230, 230);
+}
+
+.field:focus {
+    background: rgb(230, 230, 230);
+    border: 3px solid rgb(131, 179, 211);
+}
+
+.field:active {
+    background: rgb(255, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.footer-social-item:nth-child(3) {
+    margin-left: -4px;
+    margin-top: -1px;
 }
 
 .breadcrumbs-link {
@@ -453,7 +478,8 @@ body {
     min-height: 12px;
     margin: 0;
     padding: 0;
-    margin-right: 10px;
+    margin-right: 6px;
+    margin-top: 3px;
 }
 
 .breadcrumbs-item-pointer {
@@ -476,6 +502,8 @@ body {
 
 .breadcrumbs-item-icon {
     fill: rgb(255, 255, 255);
+    margin-left: 2px;
+    margin-top: 1px;
 }
 
 .breadcrumbs-item-icon:hover {
@@ -489,7 +517,7 @@ body {
 .catalog-filter-list {
     padding: 0;
     margin: 0;
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 .range-scale {
@@ -498,7 +526,7 @@ body {
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
-    margin-top: 32px;
+    margin-top: 28px;
 }
 
 .range-bar {
@@ -515,19 +543,23 @@ body {
     background: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
-    border: none;
+    border: 3px solid transparent;
     top: -8px;
+    outline: none;
 }
 
 .range-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    ;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:active,
 .range-toggle:focus {
-    outline: 3px solid;
-    outline-color: rgb(0, 0, 0);
+    border-color: rgb(131, 179, 211);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+    border: 2px solid rgb(131, 179, 211);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
 }
 
 .toggle-min {
@@ -542,16 +574,17 @@ body {
 .range-wrapper-inputs {
     display: flex;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 33px;
 }
 
 .catalog-filter-label {
     display: flex;
     border: 2px solid;
-    border-color: rgb(255, 255, 255);
-    width: 144px;
-    min-height: 48px;
+    border-color: transparent;
+    width: 141px;
+    min-height: 44px;
     align-items: center;
+    cursor: pointer;
 }
 
 .catalog-filter-label-from {
@@ -567,22 +600,57 @@ body {
 .range-input {
     min-width: 120px;
     font: inherit;
-    text-align: center;
     background-color: transparent;
-    border: none;
-    appearance: textfield;
+    border: 2px solid rgb(255, 255, 255);
     font-size: 18px;
-    line-height: 21px;
-    padding-left: 20px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    line-height: 19px;
+    padding-left: 19px;
+    padding-top: 10px;
+    padding-bottom: 11px;
     color: rgb(255, 255, 255);
+    outline: none;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
     margin: 0;
+}
+
+.range-input-nine-thousand {
+    padding-left: 15px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.range-input-zero {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.catalog-filter-label:hover .range-input {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    -moz-appearance: number-input;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus {
+    box-shadow: 0 0 0 3px rgba(129, 179, 210, 1), inset 0 0 0 3px rgba(129, 179, 210, 1);
+    -moz-appearance: number-input;
+    border: 2px solid rgba(255, 255, 255);
+}
+
+.range-input:active {
+    background-color: rgb(117, 98, 87);
+    border: 2px solid rgb(117, 98, 87);
 }
 
 .catalog-filter-label-text {
@@ -593,20 +661,25 @@ body {
     opacity: 0.3;
     padding-left: 112px;
     padding-right: 18px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 6px;
+    padding-bottom: 11px;
     font-size: 18px;
     line-height: 21px;
+}
+
+.catalog-filter-label-text-to {
+    padding-left: 106px;
 }
 
 .button-apply {
     font-size: 16px;
     line-height: 20px;
     background: rgb(130, 179, 211);
-    min-width: 130px;
+    min-width: 159px;
     min-height: 20px;
     padding: 14px 15px;
     border-radius: 4px;
+    outline: none;
 }
 
 .button-apply:hover {
@@ -632,27 +705,40 @@ body {
     background-color: unset;
     text-transform: capitalize;
     font-weight: 400;
-    margin-top: 20px;
-    min-width: 130px;
+    margin-top: 6px;
+    min-width: 159px;
     min-height: 20px;
-    padding: 14px 15px;
+    padding: 11px 18px;
     border-radius: 4px;
+    padding-left: 21px;
+    background: none;
+    border: 3px solid transparent;
+    outline: none;
 }
 
 .button-reset:hover {
-    background: rgba(255, 255, 255, 0.3);
+    opacity: 0.6;
+    background: none;
 }
 
 .button-reset:focus {
-    background: rgba(255, 255, 255, 0.3);
+    border-color: rgb(131, 179, 211);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    background: none;
+}
+
+.button-reset:active {
+    opacity: 0.3;
+    background: none;
 }
 
 .button-rank {
     background-color: rgb(255, 255, 255);
     background-size: 16px 14px;
     background: no-repeat center;
-    width: 48px;
-    min-height: 48px;
+    width: 44px;
+    min-height: 45px;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 4px;
     margin-right: 8px;
@@ -673,7 +759,7 @@ body {
 }
 
 .button-rank:focus {
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(104, 162, 202);
     background-color: inherit;
 }
 
@@ -700,7 +786,7 @@ body {
     width: 140px;
     min-height: 28px;
     border-radius: 4px;
-    padding-top: 8px;
+    padding-top: 9px;
 }
 
 .service-card-link {
@@ -716,6 +802,7 @@ body {
     min-height: 28px;
     border-radius: 4px;
     padding-top: 8px;
+    margin-left: 4px;
 }
 
 .service-card-button-favorites:hover {
@@ -733,6 +820,12 @@ body {
 
 .service-card-button-favorites:disabled {
     background: rgb(229, 229, 229);
+}
+
+.service-card-stars {
+    margin-top: 9px;
+    display: grid;
+    grid-template-columns: repeat(5, 24px);
 }
 
 .button-choice {
@@ -758,16 +851,11 @@ body {
 
 .pagination-link {
     background: rgb(130, 179, 211);
-    width: 12px;
     min-height: 36px;
-    display: block;
+    display: inline-table;
     border-radius: 4px;
-    padding: 12px 24px;
-}
-
-.pagination-link:last-child {
-    width: 23px;
-    padding: 12px 18px;
+    min-width: 23px;
+    padding: 11px 18px;
 }
 
 .pagination-link:hover {
@@ -785,6 +873,7 @@ body {
 
 .pagination-current {
     background: rgb(242, 242, 242);
+    color: rgb(0, 0, 0);
 }
 
 .pagination-current:hover {
@@ -799,7 +888,12 @@ body {
     background: rgb(242, 242, 242);
 }
 
-/*Теперь стили для index (главной)*/
+.amount-hotels-text {
+    padding: 0;
+    margin: 0;
+    margin-top: 19px;
+    margin-right: 50px;
+}
 
 .welcome {
     background-image: url("../images/welcome-image-background.jpg");
@@ -808,6 +902,13 @@ body {
     min-height: 485px;
     background-color: rgb(146, 172, 185);
     background-size: cover;
+    position: relative;
+}
+
+.welcome-graphic-element {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .welcome-subtitle {
@@ -863,6 +964,7 @@ body {
 
 .advantages-title-two-words {
     min-height: 56px;
+    width: 172px;
 }
 
 .advantages-item-white-words {
@@ -902,7 +1004,7 @@ body {
 .advantages-item-black-words-list :nth-child(2n) {
     margin: 0;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 31px;
     margin-bottom: 30px;
 }
 
@@ -945,18 +1047,27 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin: 0;
-    margin-top: 92px;
+    margin-top: 89px;
 }
 
 .search-description {
     font-size: 22px;
     line-height: 26px;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 56px;
+    margin: 0;
     width: 590px;
     align-self: center;
+    margin-top: 30px;
 }
+
+.search-description:nth-child(3) {
+    margin: 0;
+    padding: 0;
+    margin-right: 16px;
+    margin-bottom: 56px;
+    margin-top: 0;
+}
+
 
 .subscribe-title {
     font-weight: 700;
@@ -965,8 +1076,12 @@ body {
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     padding: 0;
-    padding-top: 94px;
     margin: 0;
+    margin-top: 120px;
+}
+
+.subscribe-title-in-main {
+    margin-top: 93px;
 }
 
 .subscribe-description {
@@ -976,9 +1091,11 @@ body {
     width: 475px;
     min-height: 52px;
     align-self: center;
-    padding-top: 30px;
-    padding-bottom: 46px;
     margin: 0;
+    padding: 0;
+    margin-top: 27px;
+    margin-bottom: 47px;
+    margin-left: 3px;
 }
 
 .subscribe {
@@ -987,7 +1104,6 @@ body {
     background-repeat: no-repeat;
     text-align: center;
     background-color: rgb(146, 172, 185);
-    min-height: 411px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -1006,9 +1122,8 @@ body {
 
 .field::placeholder {
     font-family: inherit;
-    line-height: 21px;
     font-size: 18px;
-    padding: 20px 490px 20px 22px;
+    line-height: 21px;
 }
 
 .footer-phone {
@@ -1022,8 +1137,9 @@ body {
     min-width: 330px;
     min-height: 40px;
     margin: 0;
-    margin-left: 224px;
+    margin-left: 218px;
     margin-right: 236px;
+    margin-top: 6px;
 }
 
 .footer-phone:hover {
@@ -1054,10 +1170,8 @@ body {
     fill: rgba(117, 97, 87, 0.3);
 }
 
-/*Теперь дополнение в стили catalog*/
-
 .catalog-filter {
-    background-image: url("../images/subscribe-background.jpg");
+    background-image: url("../images/catalog-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(255, 255, 255);
@@ -1079,13 +1193,15 @@ body {
     font-size: 20px;
     line-height: 26px;
     margin: 0;
+    padding: 0;
 }
 
 .control {
     font-size: 18px;
     line-height: 21px;
     position: relative;
-    padding-left: 36px;
+    padding-left: 40px;
+    cursor: pointer;
 }
 
 .control-mark {
@@ -1094,27 +1210,69 @@ body {
     left: 0;
     width: 20px;
     height: 20px;
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 .control-mark-circle {
     border-radius: 10px;
-}
-
-.control:hover .control-mark {
-    background-color: rgb(154, 154, 154);
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
+.control-input:focus+.control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 3px rgb(131, 179, 211);
+}
+
+.control-input:hover+.control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:active+.control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:disabled+.control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:focus-visible+.control-mark-circle {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 0 0 3px rgb(131, 179, 211);
+}
+
+.control-input:focus+.control-mark-circle {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 0 0 3px rgb(131, 179, 211);
+}
+
+.control-input:disabled+.control-mark-circle {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:checked+.control-mark {
     background-image: url("../images/mark.svg");
     background-size: 12px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.control-input[type="radio"]:checked + .control-mark-circle {
+.control-input:checked:disabled+.control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:checked+.control-mark-circle {
     background-image: url("../images/mark-circle.svg");
     background-size: 10px;
     background-repeat: no-repeat;
@@ -1122,7 +1280,7 @@ body {
 }
 
 .catalog-filter-item:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .catalog-filter-item {
@@ -1131,7 +1289,7 @@ body {
 
 .options-housing {
     margin: 0 auto;
-    margin-top: 58px;
+    margin-top: 54px;
 }
 
 .options-housing-amount {
@@ -1140,7 +1298,8 @@ body {
     line-height: 36px;
     text-transform: uppercase;
     margin: 0;
-    padding-right: 190px;
+    margin-right: 192px;
+    margin-top: 9px;
 }
 
 .options-housing-wrapper {
@@ -1153,18 +1312,74 @@ body {
     font-family: inherit;
     font-size: 18px;
     line-height: 21px;
-    margin-right: 78px;
-    min-width: 290px;
-    min-height: 50px;
-    border: 2px solid rgb(229, 229, 229);
+    margin: 0;
+    margin-right: 79px;
+    width: 289px;
+    height: 49px;
+    border: 2px solid rgb(229, 229, 229, 1);
     border-radius: 4px;
-    padding: 14px 129px 14px 20px;
+    padding: 0 81px 0 18px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+}
+
+.select-control:hover {
+    border: 2px solid rgba(104, 162, 202, 1);
+}
+
+.select-control:focus {
+    border: 2px solid rgba(104, 162, 202, 1);
+}
+
+.select-control:active {
+    border: 2px solid rgba(63, 94, 114, 1);
+}
+
+.select-control-wrapper:disabled .select-control {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    opacity: 0.3;
+}
+
+.select-control-wrapper:disabled .pointer-in-select {
+    background-image: url("../images/pointer-in-select-gray.svg");
+}
+
+.pointer-in-select {
+    background-image: url("../images/pointer-in-select.svg");
+    background-size: 12px 8px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 21px;
+}
+
+.pointer-amount-hotels {
+    right: 20px;
+    top: 26px;
 }
 
 .select-control-pagination {
-    margin-right: 0px;
-    min-width: 160px;
+    margin-right: 0;
+    width: 160px;
     min-height: 50px;
+    margin-top: 5px;
+    padding-left: 18px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.select-control-wrapper {
+    position: relative;
+    width: 290px;
+    margin: 0;
+    margin-right: 78px;
 }
 
 .options-hotels {
@@ -1174,12 +1389,19 @@ body {
     padding: 0;
 }
 
+.options-hotels:nth-child(2) {
+    margin-left: 4px;
+    margin-top: -1px;
+}
+
 .service-card-rating {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
     margin: 0;
     min-height: 36px;
+    margin-left: 28px;
+    margin-top: 10px;
 }
 
 .amount-hotels {
@@ -1188,6 +1410,7 @@ body {
     width: 386px;
     min-height: 49px;
     display: flex;
+    position: relative;
 }
 
 .in-catalog {
@@ -1208,6 +1431,8 @@ body {
     margin: 0;
     margin-right: 34px;
     position: relative;
+    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .navigation-search {
@@ -1222,16 +1447,41 @@ body {
     margin-top: 24px;
 }
 
+.navigation-item-search {
+    margin-right: 24px;
+    margin-top: 0;
+}
+
 .navigation-favorite {
     background-image: url("../images/favorite.svg");
-    background-size: 18px;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 18px;
+    min-height: 35px;
     width: 18px;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    margin-top: 24px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.navigation-favorite-circle {
+    background: rgb(125, 181, 79);
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    color: rgb(255, 254, 254);
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    position: absolute;
+    left: 12px;
+    top: 16px;
+}
+
+.navigation-item-favorite {
+    margin-right: 32px;
+    margin-top: 0;
 }
 
 .navigation-item-button {
@@ -1244,9 +1494,355 @@ body {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
-    margin-top: 14px;
+    margin-top: 15px;
 }
 
 .navigation-button-link {
     margin-right: 0;
+    margin-top: 0;
+}
+
+.advantages-title-last-group {
+    margin-top: 102px;
+}
+
+.modal-container {
+    display: none;
+    /*display: flex;*/
+    /*Применяемое свойство вместо display: none;*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-popup {
+    position: relative;
+    width: 633px;
+    min-height: 480px;
+    margin: auto;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+.modal-title {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    margin-top: 23px;
+    margin-bottom: 64px;
+    margin-left: 27px;
+}
+
+.modal-close-button {
+    position: absolute;
+    padding: 0;
+    top: 53px;
+    right: 67px;
+    width: 56px;
+    height: 56px;
+    background-color: rgb(242, 242, 242);
+    border: 3px solid rgb(242, 242, 242);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal-close-button-item {
+    fill: rgb(0, 0, 0);
+}
+
+.modal-close-button:hover {
+    background-color: rgb(230, 230, 230);
+    border: 3px solid rgb(230, 230, 230);
+}
+
+.modal-close-button:focus {
+    border: 3px solid rgb(131, 179, 211);
+}
+
+.modal-close-button:active {
+    background-color: rgb(230, 230, 230);
+    border: 3px solid rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+}
+
+.modal-close-button:active .modal-close-button-item {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-left: 28px;
+}
+
+.field-group {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-left: 37px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field-text {
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    min-width: 56px;
+    padding-top: 10px;
+}
+
+.field-command-adult {
+    margin-top: 10px;
+}
+
+.date-form-field {
+    min-width: 357px;
+    min-height: 39px;
+    background: rgb(242, 242, 242);
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    padding-right: 40px;
+    padding-top: 2px;
+    border: 3px solid transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.date-form-arrival {
+    margin-left: 6px;
+}
+
+.date-form-field:hover {
+    background: rgb(230, 230, 230);
+}
+
+.date-form-field:focus {
+    background: rgb(230, 230, 230);
+    border: 3px solid rgb(131, 179, 211);
+}
+
+.date-form-field:active {
+    background: rgb(230, 230, 230);
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.date-form-field:disabled {
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    opacity: 0.3;
+}
+
+.date-form-error {
+    color: rgb(255, 87, 87);
+    font-size: 16px;
+    line-height: 40px;
+    min-height: 29px;
+    margin-left: 5px;
+}
+
+.date-form-approve {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 40px;
+    min-height: 29px;
+}
+
+.date-form-calendar {
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.field-command-wrapper {
+    display: flex;
+    min-width: 420px;
+    position: relative;
+    margin-left: 65px;
+}
+
+.modal-button {
+    background: rgb(131, 179, 211);
+    min-width: 575px;
+    min-height: 62px;
+    border: 3px solid rgb(131, 179, 211);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    border-color: rgb(131, 179, 211);
+    border-radius: 10px;
+    margin-top: 44px;
+}
+
+.modal-button:hover {
+    background: rgb(104, 162, 202);
+    border: 3px solid rgb(104, 162, 202);
+}
+
+.modal-button:focus {
+    border: 3px solid rgb(117, 98, 87);
+    background: rgb(104, 162, 202);
+}
+
+.modal-button:active {
+    background: rgb(104, 162, 202);
+    color: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgb(104, 162, 202);
+}
+
+.field-command-item {
+    background: rgb(242, 242, 242);
+    min-width: 130px;
+    min-height: 37px;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 4px;
+    padding-left: 3px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.field-command-decrease {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.field-command-increase {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.field-command-children {
+    display: flex;
+    margin-left: 56px;
+}
+
+.quantity {
+    margin: 0 19px;
+    padding: 0;
+    padding-right: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.quantity-item {
+    padding: 0;
+    margin: 0;
+    width: 10px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    border: none;
+    background: rgb(242, 242, 242);
+    outline: none;
+}
+
+.field-mark {
+    width: 13px;
+    height: 13px;
+    font-size: 30px;
+    fill: rgba(0, 0, 0, 0.3);
+    border: 3px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.field-command-button:hover .field-mark {
+    fill: rgba(0, 0, 0);
+}
+
+.field-command-button:focus .field-mark {
+    border: 3px solid rgb(131, 179, 211);
+}
+
+.field-command-button:active .field-mark {
+    fill: rgba(0, 0, 0, 0.2);
+}
+
+.field-command-prompt {
+    background-color: rgb(131, 179, 211);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    transform: rotate(180deg);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    margin-right: 18px;
+    margin-top: 13px;
+    margin-left: -1px;
+    font-size: 12px;
+    line-height: 21px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.field-command-prompt:hover {
+    background-color: rgb(104, 162, 202);
+}
+
+.field-command-prompt:hover+.field-prompt-information {
+    display: block;
+}
+
+.field-command-prompt:hover+.field-prompt-information+.field-prompt-triangle {
+    display: block;
+}
+
+.field-prompt-information {
+    display: none;
+    position: absolute;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 21px;
+    top: 52px;
+    right: 36px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 51, 51);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 235px;
+    height: 112px;
+    padding: 16px 21px;
+    padding-right: 0;
+}
+
+.field-prompt-triangle {
+    display: none;
+    position: absolute;
+    top: 33px;
+    right: 155px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid rgb(51, 51, 51);
 }
