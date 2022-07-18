@@ -69,30 +69,31 @@
           </ul>
 
           <div class="options-catalog-container">
-            <form class="catalog-filter-group">
+            <form class="catalog-filter-group" action="https://echo.htmlacademy.ru/">
               <div class="catalog-filter-criteria">
                 <fieldset class="catalog-filter-group-items">
                   <legend class="catalog-filter-group-title">Инфраструктура:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="visually-hidden control-input" type="checkbox" name="option-pool" checked
-                          disabled>
+                      <label class="control" for="option-pool">
+                        <input class="visually-hidden control-input" type="checkbox" name="option-pool" id="option-pool"
+                          checked disabled>
                         <span class="control-mark"></span>
                         <span class="control-label">Бассейн</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="visually-hidden control-input" type="checkbox" name="option-parking" checked
-                          disabled>
+                      <label class="control" for="option-parking">
+                        <input class="visually-hidden control-input" type="checkbox" name="option-parking"
+                          id="option-parking" checked disabled>
                         <span class="control-mark"></span>
                         <span class="control-label">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="visually-hidden control-input" type="checkbox" name="option-internet">
+                      <label class="control" for="option-internet">
+                        <input class="visually-hidden control-input" type="checkbox" name="option-internet"
+                          id="option-internet">
                         <span class="control-mark"></span>
                         <span class="control-label">Wi-Fi</span>
                       </label>
@@ -104,24 +105,25 @@
                   <legend class="catalog-filter-group-title">Тип Жилья:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
-                      <label class="control">
+                      <label class="control" for="service-group-hotel">
                         <input class="visually-hidden control-input" type="radio" name="service-group" value="hotel"
-                          checked>
+                          id="service-group-hotel" checked>
                         <span class="control-mark control-mark-circle"></span>
                         <span class="control-label">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="visually-hidden control-input" type="radio" name="service-group" value="motel">
+                      <label class="control" for="service-group-motel">
+                        <input class="visually-hidden control-input" type="radio" name="service-group"
+                          id="service-group-motel" value="motel">
                         <span class="control-mark control-mark-circle"></span>
                         <span class="control-label">Мотель</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control">
+                      <label class="control" for="service-group-apartments">
                         <input class="visually-hidden control-input" type="radio" name="service-group"
-                          value="apartments">
+                          id="service-group-apartments" value="apartments">
                         <span class="control-mark control-mark-circle"></span>
                         <span class="control-label">Апартаменты</span>
                       </label>
@@ -135,13 +137,14 @@
 
                 <div class="range">
                   <div class="range-wrapper-inputs">
-                    <label class="catalog-filter-label catalog-filter-label-from">
+                    <label class="catalog-filter-label catalog-filter-label-from" for="min-price">
                       <span class="catalog-filter-label-text">от</span>
-                      <input class="range-input" type="number" value="0" name="min-price">
+                      <input class="range-input" type="number" value="0" name="min-price" id="min-price">
                     </label>
-                    <label class="catalog-filter-label catalog-filter-label-to">
+                    <label class="catalog-filter-label catalog-filter-label-to" for="max-price">
                       <span class="catalog-filter-label-text catalog-filter-label-text-to">до</span>
-                      <input class="range-input range-input-nine-thousand" type="number" value="9000" name="max-price">
+                      <input class="range-input range-input-nine-thousand" type="number" value="9000" name="max-price"
+                        id="max-price">
                     </label>
                   </div>
                   <div class="range-scale">

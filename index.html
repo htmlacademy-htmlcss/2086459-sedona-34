@@ -212,21 +212,23 @@
 
       <div class="modal-container">
         <div class="modal modal-popup">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть.</span>
-            <svg class="modal-close-button-item" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"/>
-              </svg>
+            <svg class="modal-close-button-item" width="13" height="13" viewBox="0 0 13 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z" />
+            </svg>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
 
-            <form class="modal-form" method="get">
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
               <p class="field-group field-text">Дата Заезда:</p>
               <p class="field-group">
                 <label class="visually-hidden" for="arrival-date">Укажите дату.</label>
                 <input class="date-form-field" type="text" id="arrival-date" name="arrival-date"
-                  placeholder="Укажите дату">
+                  placeholder="Укажите дату" required>
                 <span class="date-form-error">Мы не можем отправить вас в прошлое</span>
                 <svg class="date-form-calendar" width="15" height="15" viewBox="0 0 15 15" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -257,13 +259,14 @@
                     d="M11.5 11C11.2 11 11 11.2 11 11.5C11 11.8 11.2 12 11.5 12C11.8 12 12 11.8 12 11.5C12 11.2 11.8 11 11.5 11Z"
                     fill="black" />
                 </svg>
+                <span class="visually-hidden">Календарь.</span>
 
               </p>
               <p class="field-group field-text">Дата Выезда:</p>
               <p class="field-group">
                 <label class="visually-hidden" for="departure-date">Укажите дату.</label>
                 <input class="date-form-field" type="text" id="departure-date" name="departure-date"
-                  placeholder="Укажите дату">
+                  placeholder="Укажите дату" required>
                 <span class="date-form-approve">На эти даты есть свободные номера. Пока есть.</span>
                 <svg class="date-form-calendar" width="15" height="15" viewBox="0 0 15 15" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -294,6 +297,7 @@
                     d="M11.5 11C11.2 11 11 11.2 11 11.5C11 11.8 11.2 12 11.5 12C11.8 12 12 11.8 12 11.5C12 11.2 11.8 11 11.5 11Z"
                     fill="black" />
                 </svg>
+                <span class="visually-hidden">Календарь.</span>
 
               </p>
 
@@ -303,22 +307,24 @@
 
               <div class="field-command-wrapper">
                 <div class="field-command-item">
-                  <button class="field-command-decrease field-command-button" aria-label="Уменьшить">
+                  <button class="field-command-decrease field-command-button" type="button">
                     <svg class="field-mark field-decrease" width="13" height="1" viewBox="0 0 13 1" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" />
                     </svg>
+                    <span class="visually-hidden">Уменьшить.</span>
 
                   </button>
                   <span class="quantity">
                     <span class="quantity-two">2</span>
                   </span>
 
-                  <button class="field-command-increase field-command-button" aria-label="Увеличить">
+                  <button class="field-command-increase field-command-button" type="button">
                     <svg class="field-mark field-increase" width="13" height="13" viewBox="0 0 13 13" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
                     </svg>
+                    <span class="visually-hidden">Увеличить.</span>
                   </button>
                 </div>
 
@@ -330,21 +336,23 @@
                   <span class="field-prompt-triangle"></span>
 
                   <div class="field-command-item field-children-wrapper">
-                    <button class="field-command-decrease field-command-button" aria-label="Уменьшить">
+                    <button class="field-command-decrease field-command-button" type="button">
                       <svg class="field-mark field-decrease" width="13" height="1" viewBox="0 0 13 1" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" />
                       </svg>
+                      <span class="visually-hidden">Уменьшить.</span>
                     </button>
                     <span class="quantity">
                       <span class="quantity-one">1</span>
                     </span>
 
-                    <button class="field-command-increase field-command-button" aria-label="Увеличить">
+                    <button class="field-command-increase field-command-button" type="button">
                       <svg class="field-mark field-increase" width="13" height="13" viewBox="0 0 13 13" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
                       </svg>
+                      <span class="visually-hidden">Увеличить.</span>
                     </button>
                   </div>
 
