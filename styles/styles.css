@@ -64,7 +64,6 @@ img {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
     margin-left: 46px;
 }
 
@@ -579,16 +578,17 @@ img {
 .range-wrapper-inputs {
     display: flex;
     justify-content: center;
-    margin-top: 34px;
+    margin-top: 33px;
 }
 
 .catalog-filter-label {
     display: flex;
     border: 2px solid;
-    border-color: rgb(255, 255, 255);
+    border-color: transparent;
     width: 141px;
     min-height: 44px;
     align-items: center;
+    cursor: pointer;
 }
 
 .catalog-filter-label-from {
@@ -601,29 +601,20 @@ img {
     border-bottom-right-radius: 4px;
 }
 
-.catalog-filter-label:hover {
-    border-color: rgba(255, 255, 255, 0.6);
-}
-
-.catalog-filter-label:focus {
-    box-shadow: 0 0 0 3px rgba(129, 179, 210, 1), inset 0 0 0 3px rgba(129, 179, 210, 1);
-}
-
-.catalog-filter-label:active {
-    background-color: rgb(117, 98, 87);
-}
-
 .range-input {
     min-width: 120px;
     font: inherit;
     background-color: transparent;
-    border: none;
+    border: 2px solid rgb(255, 255, 255);
     font-size: 18px;
     line-height: 19px;
     padding-left: 19px;
     padding-top: 10px;
     padding-bottom: 11px;
     color: rgb(255, 255, 255);
+    outline: none;
+    appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -634,6 +625,38 @@ img {
 
 .range-input-nine-thousand {
     padding-left: 15px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.range-input-zero {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.catalog-filter-label:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-label:hover .range-input {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    -moz-appearance: number-input;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus {
+    box-shadow: 0 0 0 3px rgba(129, 179, 210, 1), inset 0 0 0 3px rgba(129, 179, 210, 1);
+    -moz-appearance: number-input;
+    border: 2px solid rgba(255, 255, 255);
+}
+
+.range-input:active {
+    background-color: rgb(117, 98, 87);
+    border: 2px solid rgb(117, 98, 87);
 }
 
 .catalog-filter-label-text {
@@ -1107,7 +1130,6 @@ img {
     font-family: inherit;
     font-size: 18px;
     line-height: 21px;
-
 }
 
 .footer-phone {
@@ -1199,50 +1221,61 @@ img {
     background: rgb(255, 255, 255);
     border-radius: 4px;
     cursor: pointer;
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid rgba(255, 255, 255);
     outline: none;
 }
 
 .control-mark-circle {
     border-radius: 10px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border: 3px solid rgb(255, 255, 255);
+    outline: none;
 }
 
-.control:hover .control-mark {
+.control-input:focus+.control-mark {
     background: rgba(255, 255, 255, 0.6);
-    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-color: rgb(131, 179, 211);
 }
 
-.control:focus .control-mark {
+.control-input:hover+.control-mark {
     background: rgba(255, 255, 255, 0.6);
-    border: 3px solid rgb(131, 179, 211);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
-.control:active .control-mark {
+.control-input:active+.control-mark {
     background: rgba(255, 255, 255, 0.3);
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-.control:hover .control-mark-circle {
+.control-input:disabled+.control-mark {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:focus+.control-mark-circle {
     background: rgba(255, 255, 255);
+    border-color: rgb(131, 179, 211);
 }
 
-.control:focus .control-mark-circle {
-    background: rgba(255, 255, 255);
-    border: 3px solid rgb(131, 179, 211);
-}
-
-.control:active .control-mark-circle {
-    background: rgba(255, 255, 255);
-}
-
-.control-input[type="checkbox"]:checked + .control-mark {
+.control-input:checked+.control-mark {
     background-image: url("../images/mark.svg");
     background-size: 12px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.control-input[type="radio"]:checked + .control-mark-circle {
+.control-input:checked:disabled+.control-mark {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:checked+.control-mark-circle {
     background-image: url("../images/mark-circle.svg");
     background-size: 10px;
     background-repeat: no-repeat;
@@ -1335,7 +1368,7 @@ img {
 
 .select-control-pagination {
     margin-right: 0;
-    min-width: 160px;
+    width: 160px;
     min-height: 50px;
     margin-top: 5px;
     padding-left: 18px;
@@ -1400,6 +1433,7 @@ img {
     margin-right: 34px;
     position: relative;
     margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .navigation-search {
@@ -1416,6 +1450,7 @@ img {
 
 .navigation-item-search {
     margin-right: 24px;
+    margin-top: 0;
 }
 
 .navigation-favorite {
@@ -1428,6 +1463,7 @@ img {
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin-top: 15px;
+    position: relative;
 }
 
 .navigation-favorite-circle {
@@ -1442,11 +1478,12 @@ img {
     /* padding: 2px; */
     position: absolute;
     left: 12px;
-    bottom: 16px;
+    top: 16px;
 }
 
 .navigation-item-favorite {
     margin-right: 32px;
+    margin-top: 0;
 }
 
 .navigation-item-button {
@@ -1464,6 +1501,7 @@ img {
 
 .navigation-button-link {
     margin-right: 0;
+    margin-top: 0;
 }
 
 .advantages-title-last-group {
@@ -1479,6 +1517,7 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(242, 242, 242, 0.8);
+    overflow: scroll;
 }
 
 .modal {
@@ -1548,11 +1587,10 @@ img {
 }
 
 .modal-form {
-    display: grid;
-    grid-template-columns: 155px 420px;
-    grid-template-rows: repeat(3, 50px) 60px;
-    grid-column-gap: 1px;
-    grid-row-gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     margin-left: 31px;
 }
 
@@ -1560,6 +1598,10 @@ img {
     margin: 0;
     padding: 0;
     position: relative;
+    margin-left: 37px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
 .field-text {
@@ -1570,7 +1612,11 @@ img {
     font-size: 20px;
     line-height: 26px;
     min-width: 56px;
-    padding-top: 12px;
+    padding-top: 10px;
+}
+
+.field-command-adult {
+    margin-top: 10px;
 }
 
 .date-form-field {
@@ -1580,18 +1626,18 @@ img {
     border-radius: 4px;
     margin: 0;
     padding: 0;
-    padding-left: 20px;
+    padding-left: 16px;
     padding-right: 40px;
     padding-top: 2px;
     border: 3px solid transparent;
     outline: none;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 21px;
 }
 
-.date-form-field::placeholder {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 40px;
-    color: rgb(0, 0, 0, 0.6);
+.date-form-arrival {
+    margin-left: 6px;
 }
 
 .date-form-field:hover {
@@ -1618,6 +1664,7 @@ img {
     font-size: 16px;
     line-height: 40px;
     min-height: 29px;
+    margin-left: 5px;
 }
 
 .date-form-approve {
@@ -1632,26 +1679,26 @@ img {
     right: 19px;
     top: 17px;
     opacity: 0.3;
+    cursor: pointer;
 }
 
 .field-command-wrapper {
     display: flex;
-    width: 420px;
+    min-width: 420px;
     position: relative;
+    margin-left: 65px;
 }
 
 .modal-button {
     background: rgb(131, 179, 211);
-    width: 568px;
-    min-height: 46px;
-    padding-top: 7px;
+    min-width: 575px;
+    min-height: 60px;
     border: 3px solid rgb(131, 179, 211);
     color: rgb(255, 255, 255);
     margin: 0;
-    margin-left: 1px;
-    margin-top: -1px;
     border-color: rgb(131, 179, 211);
     border-radius: 10px;
+    margin-top: 43px;
 }
 
 .modal-button:hover {
@@ -1710,6 +1757,19 @@ img {
     line-height: 40px;
 }
 
+.quantity-item {
+    padding: 0;
+    margin: 0;
+    width: 10px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    border: none;
+    background: rgb(242, 242, 242);
+    outline: none;
+}
+
 .field-mark {
     width: 13px;
     height: 13px;
@@ -1757,11 +1817,11 @@ img {
     background-color: rgb(104, 162, 202);
 }
 
-.field-command-prompt:hover + .field-prompt-information {
+.field-command-prompt:hover+.field-prompt-information {
     display: block;
 }
 
-.field-command-prompt:hover + .field-prompt-information + .field-prompt-triangle {
+.field-command-prompt:hover+.field-prompt-information+.field-prompt-triangle {
     display: block;
 }
 
