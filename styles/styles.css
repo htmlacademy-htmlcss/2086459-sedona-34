@@ -322,8 +322,6 @@ img {
     flex-wrap: wrap;
 }
 
-/*Ниже сначала стили для кнопок/ссылок*/
-
 .button {
     display: inline-block;
     font-family: inherit;
@@ -632,10 +630,6 @@ img {
 .range-input-zero {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-}
-
-.catalog-filter-label:hover {
-    border-color: rgba(255, 255, 255, 0.6);
 }
 
 .catalog-filter-label:hover .range-input {
@@ -1216,12 +1210,12 @@ img {
     position: absolute;
     top: 2px;
     left: 0;
-    width: 14px;
-    height: 14px;
-    background: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
     border-radius: 4px;
     cursor: pointer;
-    border: 3px solid rgba(255, 255, 255);
+    border: none;
     outline: none;
 }
 
@@ -1230,52 +1224,53 @@ img {
     position: absolute;
     top: 2px;
     left: 0;
-    width: 14px;
-    height: 14px;
-    background: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
-    border: 3px solid rgb(255, 255, 255);
+    border: none;
     outline: none;
 }
 
-.control-input:focus+.control-mark {
-    background: rgba(255, 255, 255, 0.6);
-    border-color: rgb(131, 179, 211);
+.control-input:focus + .control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 3px rgb(131, 179, 211);
 }
 
-.control-input:hover+.control-mark {
-    background: rgba(255, 255, 255, 0.6);
-    border-color: rgba(255, 255, 255, 0.6);
+.control-input:hover + .control-mark {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:active+.control-mark {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.3);
+.control-input:active + .control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:disabled+.control-mark {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.3);
+.control-input:disabled + .control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:focus+.control-mark-circle {
-    background: rgba(255, 255, 255);
-    border-color: rgb(131, 179, 211);
+.control-input:focus-visible + .control-mark-circle {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 0 0 3px rgb(131, 179, 211);
 }
 
-.control-input:checked+.control-mark {
+.control-input:focus + .control-mark-circle {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 0 0 3px rgb(131, 179, 211);
+}
+
+.control-input:checked + .control-mark {
     background-image: url("../images/mark.svg");
     background-size: 12px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.control-input:checked:disabled+.control-mark {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.3);
+.control-input:checked:disabled + .control-mark {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:checked+.control-mark-circle {
+.control-input:checked + .control-mark-circle {
     background-image: url("../images/mark-circle.svg");
     background-size: 10px;
     background-repeat: no-repeat;
@@ -1517,22 +1512,17 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(242, 242, 242, 0.8);
-    overflow: scroll;
 }
 
-.modal {
+.modal-popup {
     position: relative;
+    width: 633px;
+    min-height: 480px;
     margin: auto;
     padding: 40px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
-    min-height: 480px;
-}
-
-.modal-popup {
-    width: 638px;
-    position: relative;
 }
 
 .modal-title {
@@ -1544,15 +1534,15 @@ img {
     color: rgb(0, 0, 0);
     margin: 0;
     margin-top: 23px;
-    margin-bottom: 62px;
-    margin-left: 29px;
+    margin-bottom: 64px;
+    margin-left: 27px;
 }
 
 .modal-close-button {
     position: absolute;
     padding: 0;
-    top: 52px;
-    right: 70px;
+    top: 53px;
+    right: 67px;
     width: 56px;
     height: 56px;
     background-color: rgb(242, 242, 242);
@@ -1591,7 +1581,7 @@ img {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    margin-left: 31px;
+    margin-left: 28px;
 }
 
 .field-group {
@@ -1620,7 +1610,7 @@ img {
 }
 
 .date-form-field {
-    min-width: 354px;
+    min-width: 357px;
     min-height: 39px;
     background: rgb(242, 242, 242);
     border-radius: 4px;
@@ -1676,7 +1666,7 @@ img {
 
 .date-form-calendar {
     position: absolute;
-    right: 19px;
+    right: 18px;
     top: 17px;
     opacity: 0.3;
     cursor: pointer;
@@ -1692,13 +1682,13 @@ img {
 .modal-button {
     background: rgb(131, 179, 211);
     min-width: 575px;
-    min-height: 60px;
+    min-height: 62px;
     border: 3px solid rgb(131, 179, 211);
     color: rgb(255, 255, 255);
     margin: 0;
     border-color: rgb(131, 179, 211);
     border-radius: 10px;
-    margin-top: 43px;
+    margin-top: 44px;
 }
 
 .modal-button:hover {
@@ -1745,7 +1735,7 @@ img {
 
 .field-command-children {
     display: flex;
-    margin-left: 55px;
+    margin-left: 56px;
 }
 
 .quantity {
@@ -1805,8 +1795,9 @@ img {
     text-align: center;
     padding: 2px;
     margin: 0;
-    margin-right: 19px;
-    margin-top: 16px;
+    margin-right: 18px;
+    margin-top: 13px;
+    margin-left: -1px;
     font-size: 12px;
     line-height: 21px;
     font-family: inherit;
@@ -1817,11 +1808,11 @@ img {
     background-color: rgb(104, 162, 202);
 }
 
-.field-command-prompt:hover+.field-prompt-information {
+.field-command-prompt:hover + .field-prompt-information {
     display: block;
 }
 
-.field-command-prompt:hover+.field-prompt-information+.field-prompt-triangle {
+.field-command-prompt:hover + .field-prompt-information + .field-prompt-triangle {
     display: block;
 }
 
@@ -1831,7 +1822,7 @@ img {
     font-family: inherit;
     font-size: 16px;
     line-height: 21px;
-    top: 54px;
+    top: 52px;
     right: 36px;
     color: rgb(255, 255, 255);
     background-color: rgb(51, 51, 51);
@@ -1846,7 +1837,7 @@ img {
 .field-prompt-triangle {
     display: none;
     position: absolute;
-    top: 34px;
+    top: 33px;
     right: 155px;
     border: 10px solid transparent;
     border-bottom: 10px solid rgb(51, 51, 51);
